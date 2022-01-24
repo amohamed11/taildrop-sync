@@ -1,0 +1,6 @@
+- [x] Monitor directory changes using fsnotify
+- [ ] Add flags for setting sync directory.
+- [ ] Handle sending PUT request with added file, then deleting said file.
+  - [ ] Taildrop `PushFile` implementation [here](https://github.com/tailscale/tailscale/blob/main/client/tailscale/tailscale.go#L329) 
+- [ ] Dynamically generate subdirectories for each node.
+- [ ] Look into polling taildrop inbox for new files (is polling a good idea here???)
