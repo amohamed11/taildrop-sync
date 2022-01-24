@@ -34,7 +34,7 @@ func main() {
 		}
 	}()
 
-	err = watcher.Add("/root/TailSync/kin")
+	err = watcher.Add("/root/Sync/kin")
 	if err != nil {
 		log.Fatal(err)
 	}

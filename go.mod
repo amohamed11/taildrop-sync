@@ -1,4 +1,4 @@
-module github.com/amohamed11/tailsync
+module github.com/amohamed11/taildrop-sync
 
 go 1.16
 
