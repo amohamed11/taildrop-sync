@@ -1,10 +1,22 @@
 package main
 
 import (
+	"fmt"
 	"log"
+	"net"
 
 	"github.com/fsnotify/fsnotify"
 )
+
+func lookUpDeviceName(deviceName string) (string, error) {
+	if addrs, err := net.LookupHost(deviceName); err != nil {
+		return "", fmt.Errorf("error looking up IP of %q: %v", deviceName, err)
+	} else if len(addrs) == 0 {
+		return "", fmt.Errorf("no IPs found for %q", deviceName)
+	} else {
+		return addrs[0], nil
+	}
+}
 
 func main() {
 	watcher, err := fsnotify.NewWatcher()
